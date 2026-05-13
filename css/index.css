@@ -22,6 +22,7 @@ h1, h2 {
 	text-align: center;
 	text-transform: uppercase;
 	border-radius: 8px;
+	margin: 0;
 }
 
 h1 {
@@ -55,20 +56,55 @@ img {
     border-radius: 8px;
 }
 
-#connect ul {
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.job-title {
+    font-weight: bold;
+    color: rgb(5, 93, 9);
+}
+
+.job-date {
+    font-size: 14px;
+    color: rgb(68, 67, 66);
+}
+
+.job-description {
+    margin: 0;
+}
+
+#connect ul, nav ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: center;
 	padding: 0;
 }
 
-#connect a {
+nav ul {
+	padding-bottom: 10px;
+}
+
+#connect a, nav a {
 	color: rgb(5, 93, 9);
-	padding: 25px;
+	padding: 0 25px;
     text-decoration: none;
     font-weight: bold;
 }
 
-#connect a:hover {
+#connect a:hover, nav a:hover {
     text-decoration: underline;
+}
+
+header {
+	background-color: hsl(0, 100%, 97%);
+	padding: 0;
+	border-radius: 8px;
+	margin: 0 0 20px 20px;
+	position: sticky;
+    top: 0;
+    z-index: 1;
 }
