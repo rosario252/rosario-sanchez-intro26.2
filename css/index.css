@@ -77,6 +77,17 @@ img {
     margin: 0;
 }
 
+#skills ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));;
+	margin: auto;
+	padding: 10px;
+}
+
+#skills li {
+	margin: auto;
+}
+
 #connect ul, nav ul {
 	list-style-type: none;
 	display: flex;
