@@ -119,3 +119,44 @@ header {
     top: 0;
     z-index: 1;
 }
+
+#leave_message form {
+	display: flex;
+	flex-direction: column;
+	max-width: 650px;
+	margin: auto;
+}
+
+#leave_message label {
+	margin: 10px 0 5px;
+	font-weight: bold;
+}
+
+#leave_message input, #leave_message textarea {
+	background-color: hsl(0, 100%, 97%);
+	padding: 8px;
+	border: 2px solid rgb(5, 93, 9);
+	border-radius: 8px;
+	font: inherit;
+	color: rgb(68, 67, 66);
+}
+
+#leave_message textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+#leave_message button {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: rgb(5, 93, 9);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#leave_message button:hover {
+  background-color: rgb(4, 75, 8);
+}

@@ -20,3 +20,36 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerHTML = skills[i];
   skillsList.appendChild(skill);
 }
+
+// getting the form and adding an event listener to it
+const messageForm = document.forms['leave_message'];
+
+messageForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+
+  console.log(usersName, usersEmail, usersMessage);
+
+  const messageSection = document.getElementById('messages');
+  const messageList = messageSection.querySelector('ul');
+  const newMessage = document.createElement('li');
+  newMessage.innerHTML = `
+    <a href="mailto:${usersEmail}">${usersName}</a>
+    <span>${usersMessage}</span>
+  `;
+
+  const removeButton = document.createElement('button');
+  removeButton.innerText = 'remove';
+  removeButton.type = 'button';
+  removeButton.addEventListener('click', function (event) {
+    const entry = event.target.parentNode;
+    entry.remove();
+  });
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});
