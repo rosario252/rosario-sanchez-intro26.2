@@ -73,7 +73,7 @@ fetch('https://api.github.com/users/rosario252/repos', {
 
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement('li');
-      project.innerHTML = repositories[i].name;
+      project.textContent = repositories[i].name;
       projectList.appendChild(project);
     }
   })
@@ -81,7 +81,7 @@ fetch('https://api.github.com/users/rosario252/repos', {
     console.error('An error occurred:', error);
 
     const errorMessaage = document.createElement('p');
-    errorMessaage.innerHTML = 'An error occurred while fetching the repositories.';
+    errorMessage.innerHTML = 'An error occurred while fetching the repositories.';
     const projectSection = document.getElementById('projects');
-    projectSection.appendChild(errorMessaage);
+    projectSection.appendChild(errorMessage);
   });
