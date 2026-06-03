@@ -79,4 +79,8 @@ fetch('https://api.github.com/users/rosario252/repos', {
   })
   .catch(error => {
     console.error('An error occurred:', error);
+
+    const errorMessaage = document.createElement('p');
+    errorMessaage.innerHTML = 'An error occurred while fetching the repositories.';
+    projectSection.appendChild(errorMessaage);
   });
