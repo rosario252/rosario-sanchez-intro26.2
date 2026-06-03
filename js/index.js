@@ -80,7 +80,7 @@ fetch('https://api.github.com/users/rosario252/repos', {
   .catch(error => {
     console.error('An error occurred:', error);
 
-    const errorMessaage = document.createElement('p');
+    const errorMessage = document.createElement('p');
     errorMessage.innerHTML = 'An error occurred while fetching the repositories.';
     const projectSection = document.getElementById('projects');
     projectSection.appendChild(errorMessage);
