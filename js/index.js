@@ -53,3 +53,35 @@ messageForm.addEventListener('submit', function (event) {
 
   messageForm.reset();
 });
+
+// fetching data from GitHub API
+fetch('https://api.github.com/users/rosario252/repos', {
+  method: 'GET',
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const repositories = data;
+    console.log(repositories);
+
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      project.textContent = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+
+    const errorMessage = document.createElement('p');
+    errorMessage.innerHTML = 'An error occurred while fetching the repositories.';
+    const projectSection = document.getElementById('projects');
+    projectSection.appendChild(errorMessage);
+  });

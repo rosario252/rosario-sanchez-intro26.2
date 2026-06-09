@@ -77,15 +77,18 @@ img {
     margin: 0;
 }
 
-#skills ul {
+#skills ul, #projects ul {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));;
-	margin: auto;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));;
+	margin: 0 auto;
+	gap: 10px;
 	padding: 10px;
 }
 
-#skills li {
+#skills li, #projects li {
 	margin: auto;
+	min-width: 0;
+	overflow-wrap: anywhere;;
 }
 
 #connect ul, nav ul {
