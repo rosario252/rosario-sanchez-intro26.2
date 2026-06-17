@@ -103,6 +103,8 @@ function getConditionName(code) {
     }
 }
 
+console.log("Code is working this far");
+
 // Input event listener
 // If user deletes the city, we clear the saved city info
 search.addEventListener('input', function (event) {
