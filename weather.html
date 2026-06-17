@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Weather App</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/weather.css" rel="stylesheet" type="text/css">
+	
+	<!-- Fonts from Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>Weather App</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">&larr; Back to Portfolio</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <main>
+        <section>
+            <h2>Weather App</h2>
+            <p>Search for a city.</p>
+            <p>Then choose which weather details you want to view.</p>
+        </section>
+
+        <section>
+            <form id="weatherForm">
+                <label for="search">Enter a city:</label>
+                <input type="text" id="search" name="search" placeholder=" Enter City" required />
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section>
+            <button id="tempBtn" type="button">Show Temperature</button>
+            <button id="conditionBtn" type="button">Show Conditions</button>
+        </section>
+
+        <section>
+            <h2>Weather Details</h2>
+            <p id="message1"></p>
+            <p id="cityState"></p>
+            <p id="currentTemp"></p>
+            <p id="currentWeather"></p>
+        </section>
+    </main>
+
+    <script src="js/weather.js"></script>
+</body>
+</html>
